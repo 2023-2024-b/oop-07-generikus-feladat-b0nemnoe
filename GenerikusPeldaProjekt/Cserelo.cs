@@ -1,4 +1,6 @@
-﻿namespace GenerikusPeldaProjekt
+﻿using System.Xml.Linq;
+
+namespace GenerikusPeldaProjekt
 {
     public static class Cserelo<T> where T : class 
     {
@@ -8,6 +10,10 @@
             T temp =  elso;
             elso = masodik;
             masodik = temp;
+        }
+        public static string ToString(T elso, T masodik)
+        {
+            return $"{elso}, {masodik}";
         }
     }
 }
